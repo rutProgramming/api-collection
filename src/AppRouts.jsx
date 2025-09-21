@@ -7,7 +7,7 @@ import Counter from './componenets/Counter';
 import Counter2 from './componenets/Counter2';
 import Atlas from './componenets/Atlas/Atlas';
 import Pixabay from './componenets/Pixabay.jsx/Pixabay';
-import Billionaires from './componenets/Billionaires/Billionaires';
+import Vip from './componenets/Billionaires/Vip';
 function AppRoutes() {
     const [number, SetNumber] = useState(6);
     const [coins, SetCoins] = useState(33);
@@ -43,7 +43,7 @@ function AppRoutes() {
                     <Route path='/counter2' element={<Counter2/>}></Route>
                     <Route path='/atlas' element={<Atlas/>}></Route>
                     <Route path='/pixa/cats' element={<Pixabay/>}></Route>
-                    <Route path='/Billionaires' element={<Billionaires/>}></Route>
+                    <Route path='/Billionaires' element={<Vip/>}></Route>
                 </Routes>
             </AppContext.Provider>
             <footer className='p-2 container bg-danger'>footer</footer>
