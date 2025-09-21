@@ -7,7 +7,7 @@ const Pixabay = () => {
   const [infoItem, setInfoItem] = useState([]);
 
   useEffect(() => {
-    doApi("clouds");
+    doApi();
   }, []);
 
   const doApi = async (_item) => {
