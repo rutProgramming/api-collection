@@ -1,0 +1,33 @@
+# ==============================
+# Node / React
+# ==============================
+node_modules/
+npm-debug.log*
+
+# Build output
+build/
+dist/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# ==============================
+# .env
+# ==============================
+.env
