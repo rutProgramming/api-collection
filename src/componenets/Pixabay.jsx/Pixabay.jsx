@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PixabayInput from "./PixabayInput";
 import PixabayInfo from "./PixabayInfo";
-import axios from "axios";
+import { fetchPixabayImages } from "../../../Server";
+
 const Pixabay = () => {
   const [infoItem, setInfoItem] = useState([]);
 
@@ -10,21 +11,12 @@ const Pixabay = () => {
   }, []);
 
   const doApi = async (_item) => {
-    setInfoItem([]);
-    const url = "https://pixabay.com/api/";
-
+    setInfoItem([]); 
     try {
-      const response = await axios.get(url, {
-        params: {
-          key: import.meta.env.VITE_PIXABAY_API_KEY,
-          q: _item,
-          image_type: "photo",
-        },
-      });
-
-      setInfoItem(response.data.hits);
+      const data = await fetchPixabayImages(_item);
+      setInfoItem(data);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       alert("There is a problem, come back later");
     }
   };
